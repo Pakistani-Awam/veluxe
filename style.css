@@ -706,8 +706,30 @@ img {
 }
 
 /* ===== WHY CHOOSE US SECTION ===== */
-.why-choose-us {
-    background: var(--color-black);
+.why-choose-us,
+.featured-cars {
+    position: relative;
+    z-index: 1;
+    background: radial-gradient(circle at top center, rgba(212, 175, 55, 0.08), transparent 35%), var(--color-black);
+}
+
+.why-choose-us .section-header,
+.featured-cars .section-header {
+    position: relative;
+    z-index: 2;
+}
+
+.features-grid,
+.cars-grid {
+    display: grid !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.feature-card,
+.car-card {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .features-grid {
