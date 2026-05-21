@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initSearchFilter();
     initNewsletterForm();
     initGSAPAnimations();
+    setupQuickViewListeners();
+    setupCardClickListeners();
 });
 
 // ===== GSAP ANIMATIONS =====
@@ -335,6 +337,34 @@ function setupBuyNowListeners() {
             processPurchase(currentCarData);
         });
     }
+}
+
+function setupQuickViewListeners() {
+    const quickViewBtns = document.querySelectorAll('.car-quick-view');
+
+    quickViewBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+
+            const carCard = this.closest('.car-card');
+            if (!carCard) return;
+
+            openCarDetails(carCard);
+        });
+    });
+}
+
+function setupCardClickListeners() {
+    // Use delegated listener on document to handle dynamically added cards
+    document.addEventListener('click', function(e) {
+        const card = e.target.closest('.car-card');
+        if (!card) return;
+
+        // Ignore clicks originating from interactive elements
+        if (e.target.closest('button, a, .btn, .car-quick-view')) return;
+
+        openCarDetails(card);
+    });
 }
 
 function getCarData(carCard) {
