@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Veluxe Motors - Get in touch with our team to schedule a test drive or learn more about our luxury car collection.">
+    <title>Contact Us | Veluxe Motors</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VELUXE<span>.</span></a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="cars.html" class="nav-link">Cars</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <img src="assets/showroom.jpg" alt="Contact Veluxe Motors" class="hero-bg">
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <span class="hero-subtitle">Get in Touch</span>
+            <h1 class="hero-title">Contact <span class="gold-text">Us</span></h1>
+            <p class="hero-description">
+                We would love to hear from you. Reach out to schedule a viewing or discuss your dream car.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Let&apos;s Start a <span class="gold-text">Conversation</span></h2>
+                    <p>
+                        Whether you are looking for your dream car, want to schedule a test drive, 
+                        or simply have questions about our collection, our team of specialists is here 
+                        to provide you with an exceptional experience.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Visit Our Showroom</h4>
+                                <p>888 Luxury Avenue, Beverly Hills, CA 90210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <p>+1 (888) 555-LUXE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p>info@veluxemotors.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Business Hours</h4>
+                                <p>Mon - Sat: 9AM - 7PM | Sun: By Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 style="margin-bottom: 1rem; font-family: var(--font-heading);">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form id="contact-form" action="https://formspree.io/f/xdajggna" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                            <label for="name" class="form-label">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                            <label for="email" class="form-label">Email Address</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder=" ">
+                            <label for="phone" class="form-label">Phone Number</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="interest" name="interest" class="form-input" required>
+                                <option value="" disabled selected>Select Your Interest</option>
+                                <option value="purchase">Vehicle Purchase</option>
+                                <option value="test-drive">Test Drive</option>
+                                <option value="financing">Financing Options</option>
+                                <option value="trade-in">Trade-In</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group textarea">
+                            <textarea id="message" name="message" class="form-textarea" placeholder=" " rows="5" required></textarea>
+                            <label for="message" class="form-label">Your Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-placeholder">
+            <div style="text-align: center;">
+                <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1rem; display: block;"></i>
+                <p>Interactive Map Coming Soon</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">888 Luxury Avenue, Beverly Hills, CA 90210</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background: var(--color-black);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked <span class="gold-text">Questions</span></h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Find answers to common questions about our services
+            </p>
+            
+            <div class="cars-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 1rem; color: var(--color-gold);">
+                        <i class="fas fa-question-circle" style="margin-right: 0.5rem;"></i>
+                        How do I schedule a test drive?
+                    </h3>
+                    <p class="testimonial-text" style="font-style: normal;">
+                        Simply fill out our contact form or call us directly. Our team will work with your schedule 
+                        to arrange a private test drive experience at your convenience.
+                    </p>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 1rem; color: var(--color-gold);">
+                        <i class="fas fa-question-circle" style="margin-right: 0.5rem;"></i>
+                        Do you offer financing options?
+                    </h3>
+                    <p class="testimonial-text" style="font-style: normal;">
+                        Yes, we partner with premium financial institutions to offer competitive financing 
+                        and leasing options tailored to your needs.
+                    </p>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 1rem; color: var(--color-gold);">
+                        <i class="fas fa-question-circle" style="margin-right: 0.5rem;"></i>
+                        Can I trade in my current vehicle?
+                    </h3>
+                    <p class="testimonial-text" style="font-style: normal;">
+                        Absolutely. We offer fair market valuations for trade-ins and can apply the value 
+                        directly to your new purchase.
+                    </p>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: 1rem; color: var(--color-gold);">
+                        <i class="fas fa-question-circle" style="margin-right: 0.5rem;"></i>
+                        Do you ship vehicles internationally?
+                    </h3>
+                    <p class="testimonial-text" style="font-style: normal;">
+                        Yes, we have experience delivering vehicles to clients worldwide. Our logistics team 
+                        handles all documentation and shipping arrangements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">VELUXE<span>.</span></a>
+                    <p>
+                        Where automotive excellence meets unparalleled luxury. 
+                        Experience the pinnacle of performance and sophistication.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cars.html">Our Cars</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Car Sales</a></li>
+                        <li><a href="#">Test Drives</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 888 Luxury Avenue, Beverly Hills</li>
+                        <li><i class="fas fa-phone"></i> +1 (888) 555-LUXE</li>
+                        <li><i class="fas fa-envelope"></i> info@veluxemotors.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Veluxe Motors. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

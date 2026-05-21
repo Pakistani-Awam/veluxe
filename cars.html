@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veluxe Motors Car Collection - Browse our exclusive selection of luxury supercars, sports cars, and premium vehicles.">
+    <title>Our Cars | Veluxe Motors</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">VELUXE<span>.</span></div>
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VELUXE<span>.</span></a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="cars.html" class="nav-link active">Cars</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <button class="nav-cart" id="cart-toggle" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-cars">
+        <img src="assets/cars/lamborghini-aventador.jpg" alt="Luxury Car Collection" class="hero-bg">
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <span class="hero-subtitle animate-text-reveal">Our Collection</span>
+            <h1 class="hero-title">
+                <span class="word-animate">Luxury</span> 
+                <span class="word-animate gold-text">Cars</span>
+            </h1>
+            <p class="hero-description animate-fade-up">
+                Discover the finest selection of premium automobiles from the world's most prestigious brands
+            </p>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="page-hero-stats">
+            <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="200">
+                <span class="hero-stat-number">50+</span>
+                <span class="hero-stat-label">Premium Cars</span>
+            </div>
+            <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="300">
+                <span class="hero-stat-number">15</span>
+                <span class="hero-stat-label">Luxury Brands</span>
+            </div>
+            <div class="hero-stat-item" data-aos="fade-up" data-aos-delay="400">
+                <span class="hero-stat-number">100%</span>
+                <span class="hero-stat-label">Verified</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Collection Section -->
+    <section class="section cars-section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-container" data-aos="fade-up">
+                <div class="filter-label">Filter by:</div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th-large"></i>
+                        All
+                    </button>
+                    <button class="filter-btn" data-filter="supercar">
+                        <i class="fas fa-rocket"></i>
+                        Supercars
+                    </button>
+                    <button class="filter-btn" data-filter="sports">
+                        <i class="fas fa-flag-checkered"></i>
+                        Sports
+                    </button>
+                    <button class="filter-btn" data-filter="luxury">
+                        <i class="fas fa-crown"></i>
+                        Luxury
+                    </button>
+                    <button class="filter-btn" data-filter="electric">
+                        <i class="fas fa-bolt"></i>
+                        Electric
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="car-search" placeholder="Search by brand, model, or category...">
+                    <button class="search-clear" id="search-clear">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="results-count">
+                    Showing <span id="results-count">18</span> vehicles
+                </div>
+            </div>
+            
+            <!-- Cars Grid -->
+            <div class="cars-collection" id="cars-grid">
+                <!-- Lamborghini Aventador -->
+                <div class="car-card" data-category="supercar" data-aos="fade-up" data-aos-delay="100"
+                     data-id="1" data-brand="Lamborghini" data-model="Aventador SVJ" data-price="573966" data-image="assets/cars/lamborghini-aventador.jpg"
+                     data-year="2024" data-engine="6.5L V12" data-transmission="7-Speed ISR" data-drivetrain="AWD" data-power="770" data-torque="531" data-topspeed="217" data-acceleration="2.8" data-fuel="12 mpg" data-weight="3362">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/lamborghini-aventador.jpg" alt="Lamborghini Aventador SVJ" class="car-image">
+                        <span class="car-badge">New Arrival</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Lamborghini</span>
+                        <h3 class="car-model">Aventador SVJ</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">770 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">217 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.8s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$573,966</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="1">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="1">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Porsche 911 Turbo S -->
+                <div class="car-card" data-category="sports" data-aos="fade-up" data-aos-delay="200"
+                     data-id="2" data-brand="Porsche" data-model="911 Turbo S" data-price="216100" data-image="assets/cars/porsche-911.jpg"
+                     data-year="2024" data-engine="3.8L Twin-Turbo Flat-6" data-transmission="8-Speed PDK" data-drivetrain="AWD" data-power="640" data-torque="590" data-topspeed="205" data-acceleration="2.6" data-fuel="17 mpg" data-weight="3636">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/porsche-911.jpg" alt="Porsche 911 Turbo S" class="car-image">
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Porsche</span>
+                        <h3 class="car-model">911 Turbo S</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">640 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">205 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.6s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$216,100</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="2">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="2">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rolls Royce Spectre -->
+                <div class="car-card" data-category="electric luxury" data-aos="fade-up" data-aos-delay="300"
+                     data-id="3" data-brand="Rolls Royce" data-model="Spectre" data-price="420000" data-image="assets/cars/rolls-royce-spectre.jpg"
+                     data-year="2024" data-engine="Dual Electric Motors" data-transmission="Single-Speed" data-drivetrain="AWD" data-power="577" data-torque="664" data-topspeed="155" data-acceleration="4.4" data-fuel="Electric - 260mi range" data-weight="6559">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/rolls-royce-spectre.jpg" alt="Rolls Royce Spectre" class="car-image">
+                        <span class="car-badge badge-electric">Electric</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Rolls Royce</span>
+                        <h3 class="car-model">Spectre</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">577 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">155 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">4.4s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$420,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="3">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="3">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mercedes AMG GT -->
+                <div class="car-card" data-category="sports" data-aos="fade-up" data-aos-delay="100"
+                     data-id="4" data-brand="Mercedes-AMG" data-model="GT 63 S" data-price="179000" data-image="assets/cars/mercedes-amg-gt.jpg"
+                     data-year="2024" data-engine="4.0L Twin-Turbo V8" data-transmission="9-Speed AMG" data-drivetrain="AWD" data-power="630" data-torque="664" data-topspeed="196" data-acceleration="3.1" data-fuel="16 mpg" data-weight="4550">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/mercedes-amg-gt.jpg" alt="Mercedes AMG GT" class="car-image">
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Mercedes-AMG</span>
+                        <h3 class="car-model">GT 63 S</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">630 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">196 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">3.1s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$179,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="4">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="4">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ferrari SF90 -->
+                <div class="car-card" data-category="supercar" data-aos="fade-up" data-aos-delay="200"
+                     data-id="5" data-brand="Ferrari" data-model="SF90 Stradale" data-price="625000" data-image="assets/cars/ferrari-sf90.jpg"
+                     data-year="2024" data-engine="4.0L Twin-Turbo V8 + 3 Electric Motors" data-transmission="8-Speed F1 DCT" data-drivetrain="AWD" data-power="986" data-torque="590" data-topspeed="211" data-acceleration="2.5" data-fuel="16 mpg (Hybrid)" data-weight="3461">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/ferrari-sf90.jpg" alt="Ferrari SF90 Stradale" class="car-image">
+                        <span class="car-badge">Exclusive</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Ferrari</span>
+                        <h3 class="car-model">SF90 Stradale</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">986 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">211 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.5s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$625,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="5">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="5">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bentley Continental -->
+                <div class="car-card" data-category="luxury" data-aos="fade-up" data-aos-delay="300"
+                     data-id="6" data-brand="Bentley" data-model="Continental GT" data-price="245000" data-image="assets/cars/rolls-royce-spectre.jpg"
+                     data-year="2024" data-engine="6.0L Twin-Turbo W12" data-transmission="8-Speed DCT" data-drivetrain="AWD" data-power="650" data-torque="664" data-topspeed="208" data-acceleration="3.5" data-fuel="14 mpg" data-weight="5005">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/rolls-royce-spectre.jpg" alt="Bentley Continental GT" class="car-image">
+                        <span class="car-badge badge-luxury">Premium</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Bentley</span>
+                        <h3 class="car-model">Continental GT</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">650 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">208 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">3.5s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$245,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="6">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="6">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- McLaren 720S -->
+                <div class="car-card" data-category="supercar" data-aos="fade-up" data-aos-delay="100"
+                     data-id="7" data-brand="McLaren" data-model="720S Spider" data-price="315000" data-image="assets/cars/lamborghini-aventador.jpg"
+                     data-year="2024" data-engine="4.0L Twin-Turbo V8" data-transmission="7-Speed SSG" data-drivetrain="RWD" data-power="710" data-torque="568" data-topspeed="212" data-acceleration="2.8" data-fuel="18 mpg" data-weight="3128">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/lamborghini-aventador.jpg" alt="McLaren 720S" class="car-image">
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">McLaren</span>
+                        <h3 class="car-model">720S Spider</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">710 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">212 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.8s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$315,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="7">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="7">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Aston Martin DB12 -->
+                <div class="car-card" data-category="sports luxury" data-aos="fade-up" data-aos-delay="200"
+                     data-id="8" data-brand="Aston Martin" data-model="DB12 Volante" data-price="249000" data-image="assets/cars/mercedes-amg-gt.jpg"
+                     data-year="2024" data-engine="4.0L Twin-Turbo V8" data-transmission="8-Speed Auto" data-drivetrain="RWD" data-power="671" data-torque="590" data-topspeed="202" data-acceleration="3.6" data-fuel="20 mpg" data-weight="3990">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/mercedes-amg-gt.jpg" alt="Aston Martin DB12" class="car-image">
+                        <span class="car-badge">2024</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Aston Martin</span>
+                        <h3 class="car-model">DB12 Volante</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">671 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">202 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">3.6s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$249,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="8">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="8">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Porsche Taycan Turbo S -->
+                <div class="car-card" data-category="electric sports" data-aos="fade-up" data-aos-delay="300"
+                     data-id="9" data-brand="Porsche" data-model="Taycan Turbo S" data-price="185000" data-image="assets/cars/porsche-911.jpg"
+                     data-year="2024" data-engine="Dual Electric Motors" data-transmission="2-Speed Auto" data-drivetrain="AWD" data-power="750" data-torque="774" data-topspeed="162" data-acceleration="2.4" data-fuel="Electric - 280mi range" data-weight="5132">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/porsche-911.jpg" alt="Porsche Taycan Turbo S" class="car-image">
+                        <span class="car-badge badge-electric">Electric</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Porsche</span>
+                        <h3 class="car-model">Taycan Turbo S</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">750 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">162 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.4s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$185,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="9">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="9">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bugatti Chiron -->
+                <div class="car-card" data-category="supercar" data-aos="fade-up" data-aos-delay="100"
+                     data-id="10" data-brand="Bugatti" data-model="Chiron Super Sport" data-price="3900000" data-image="assets/cars/ferrari-sf90.jpg"
+                     data-year="2024" data-engine="8.0L Quad-Turbo W16" data-transmission="7-Speed DCT" data-drivetrain="AWD" data-power="1578" data-torque="1180" data-topspeed="273" data-acceleration="2.3" data-fuel="8 mpg" data-weight="4400">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/ferrari-sf90.jpg" alt="Bugatti Chiron" class="car-image">
+                        <span class="car-badge badge-rare">Ultra Rare</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Bugatti</span>
+                        <h3 class="car-model">Chiron Super Sport</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">1578 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">273 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.3s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$3,900,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="10">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="10">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ferrari 296 GTB -->
+                <div class="car-card" data-category="supercar" data-aos="fade-up" data-aos-delay="200"
+                     data-id="11" data-brand="Ferrari" data-model="296 GTB" data-price="351000" data-image="assets/cars/ferrari-sf90.jpg"
+                     data-year="2024" data-engine="3.0L Twin-Turbo V6 Hybrid" data-transmission="8-Speed F1 DCT" data-drivetrain="RWD" data-power="819" data-torque="546" data-topspeed="205" data-acceleration="2.9" data-fuel="18 mpg (Hybrid)" data-weight="3241">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/ferrari-sf90.jpg" alt="Ferrari 296 GTB" class="car-image">
+                        <span class="car-badge">Hybrid</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Ferrari</span>
+                        <h3 class="car-model">296 GTB</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">819 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">205 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.9s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$351,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="11">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="11">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lamborghini Huracan -->
+                <div class="car-card" data-category="supercar" data-aos="fade-up" data-aos-delay="300"
+                     data-id="12" data-brand="Lamborghini" data-model="Huracan Tecnica" data-price="239000" data-image="assets/cars/lamborghini-aventador.jpg"
+                     data-year="2024" data-engine="5.2L V10" data-transmission="7-Speed DCT" data-drivetrain="RWD" data-power="631" data-torque="417" data-topspeed="202" data-acceleration="3.2" data-fuel="14 mpg" data-weight="3313">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/lamborghini-aventador.jpg" alt="Lamborghini Huracan" class="car-image">
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Lamborghini</span>
+                        <h3 class="car-model">Huracan Tecnica</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">631 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">202 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">3.2s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$239,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="12">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="12">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BMW M8 Competition -->
+                <div class="car-card" data-category="sports luxury" data-aos="fade-up" data-aos-delay="100"
+                     data-id="13" data-brand="BMW" data-model="M8 Competition" data-price="143000" data-image="assets/cars/mercedes-amg-gt.jpg"
+                     data-year="2024" data-engine="4.4L Twin-Turbo V8" data-transmission="8-Speed M Steptronic" data-drivetrain="AWD" data-power="617" data-torque="553" data-topspeed="190" data-acceleration="3.0" data-fuel="17 mpg" data-weight="4295">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/mercedes-amg-gt.jpg" alt="BMW M8 Competition" class="car-image">
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">BMW</span>
+                        <h3 class="car-model">M8 Competition</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">617 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">190 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">3.0s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$143,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="13">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="13">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tesla Model S Plaid -->
+                <div class="car-card" data-category="electric luxury" data-aos="fade-up" data-aos-delay="200"
+                     data-id="14" data-brand="Tesla" data-model="Model S Plaid" data-price="108000" data-image="assets/cars/porsche-911.jpg"
+                     data-year="2024" data-engine="Tri-Motor Electric" data-transmission="Single-Speed" data-drivetrain="AWD" data-power="1020" data-torque="1050" data-topspeed="200" data-acceleration="1.99" data-fuel="Electric - 396mi range" data-weight="4766">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/porsche-911.jpg" alt="Tesla Model S Plaid" class="car-image">
+                        <span class="car-badge badge-electric">Electric</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Tesla</span>
+                        <h3 class="car-model">Model S Plaid</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">1020 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">200 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">1.99s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$108,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="14">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="14">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maserati MC20 -->
+                <div class="car-card" data-category="supercar sports" data-aos="fade-up" data-aos-delay="300"
+                     data-id="15" data-brand="Maserati" data-model="MC20 Cielo" data-price="260000" data-image="assets/cars/ferrari-sf90.jpg"
+                     data-year="2024" data-engine="3.0L Twin-Turbo V6 Nettuno" data-transmission="8-Speed DCT" data-drivetrain="RWD" data-power="621" data-torque="538" data-topspeed="198" data-acceleration="2.9" data-fuel="18 mpg" data-weight="3439">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/ferrari-sf90.jpg" alt="Maserati MC20" class="car-image">
+                        <span class="car-badge">Convertible</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Maserati</span>
+                        <h3 class="car-model">MC20 Cielo</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">621 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">198 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.9s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$260,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="15">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="15">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lotus Emira -->
+                <div class="car-card" data-category="sports" data-aos="fade-up" data-aos-delay="100"
+                     data-id="16" data-brand="Lotus" data-model="Emira V6" data-price="93000" data-image="assets/cars/lamborghini-aventador.jpg"
+                     data-year="2024" data-engine="3.5L Supercharged V6" data-transmission="6-Speed Manual" data-drivetrain="RWD" data-power="400" data-torque="310" data-topspeed="180" data-acceleration="4.2" data-fuel="23 mpg" data-weight="3097">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/lamborghini-aventador.jpg" alt="Lotus Emira" class="car-image">
+                        <span class="car-badge badge-value">Best Value</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Lotus</span>
+                        <h3 class="car-model">Emira V6</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">400 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">180 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">4.2s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$93,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="16">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="16">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audi RS e-tron GT -->
+                <div class="car-card" data-category="electric sports" data-aos="fade-up" data-aos-delay="200"
+                     data-id="17" data-brand="Audi" data-model="RS e-tron GT" data-price="164000" data-image="assets/cars/mercedes-amg-gt.jpg"
+                     data-year="2024" data-engine="Dual Electric Motors" data-transmission="2-Speed Auto" data-drivetrain="AWD" data-power="637" data-torque="612" data-topspeed="155" data-acceleration="3.1" data-fuel="Electric - 232mi range" data-weight="5139">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/mercedes-amg-gt.jpg" alt="Audi RS e-tron GT" class="car-image">
+                        <span class="car-badge badge-electric">Electric</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Audi</span>
+                        <h3 class="car-model">RS e-tron GT</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">637 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">155 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">3.1s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$164,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="17">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="17">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maybach S680 -->
+                <div class="car-card" data-category="luxury" data-aos="fade-up" data-aos-delay="300"
+                     data-id="18" data-brand="Mercedes-Maybach" data-model="S 680" data-price="229000" data-image="assets/cars/rolls-royce-spectre.jpg"
+                     data-year="2024" data-engine="6.0L Twin-Turbo V12" data-transmission="9-Speed Auto" data-drivetrain="AWD" data-power="621" data-torque="738" data-topspeed="155" data-acceleration="4.4" data-fuel="15 mpg" data-weight="5335">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/rolls-royce-spectre.jpg" alt="Maybach S680" class="car-image">
+                        <span class="car-badge badge-luxury">Ultra Luxury</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" onclick="openCarDetails(this.closest('.car-card'))">
+                                <i class="fas fa-eye"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Mercedes-Maybach</span>
+                        <h3 class="car-model">S 680</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">621 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">155 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">4.4s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$229,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="18">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="18">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="no-results">
+                <div class="no-results-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>No Cars Found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+                <button class="btn btn-primary" onclick="resetFilters()">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section cta-section-alt">
+        <div class="cta-bg-image"></div>
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">Ready to <span class="gold-text">Experience</span> Luxury?</h2>
+                <p class="cta-text">
+                    Schedule a private viewing or test drive with our expert team
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg btn-glow">
+                        <i class="fas fa-calendar"></i>
+                        Book a Test Drive
+                    </a>
+                    <a href="tel:+18885559893" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand" data-aos="fade-up">
+                        <a href="index.html" class="nav-logo">VELUXE<span>.</span></a>
+                        <p>
+                            Where automotive excellence meets unparalleled luxury. 
+                            Experience the pinnacle of performance and sophistication.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="cars.html"><i class="fas fa-chevron-right"></i> Our Cars</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                        <h4>Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Car Sales</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Test Drives</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Financing</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Maintenance</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+                        <h4>Contact</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>888 Luxury Avenue<br>Beverly Hills, CA 90210</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (888) 555-LUXE</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@veluxemotors.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Veluxe Motors. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="cart-total-price" id="cart-total">$0</span>
+            </div>
+            <button class="cart-checkout" id="cart-checkout">
+                <i class="fas fa-lock"></i>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Buy Now Modal -->
+    <div class="modal-overlay" id="buy-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Quick Purchase</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <div class="modal-car-info" id="modal-car-info">
+                    <!-- Car info will be inserted here -->
+                </div>
+                <form class="modal-form" id="buy-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="buy-name" placeholder=" " required>
+                            <label class="form-label">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="buy-email" placeholder=" " required>
+                            <label class="form-label">Email</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" class="form-input" id="buy-phone" placeholder=" " required>
+                            <label class="form-label">Phone</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="buy-city" placeholder=" " required>
+                            <label class="form-label">City</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="modal-submit" id="modal-submit" form="buy-form">
+                    <i class="fas fa-credit-card"></i>
+                    Complete Purchase
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Details Modal -->
+    <div class="modal-overlay" id="car-details-modal">
+        <div class="modal modal-lg modal-car-details">
+            <div class="modal-header">
+                <h3 id="car-details-title">Car Details</h3>
+                <button class="modal-close" onclick="closeCarDetails()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="car-details-body">
+                <!-- Car details will be inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

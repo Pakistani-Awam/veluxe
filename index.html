@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veluxe Motors - Experience Automotive Luxury. Premium luxury car showroom featuring the world's finest automobiles.">
+    <title>Veluxe Motors | Luxury Car Showroom</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">VELUXE<span>.</span></div>
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">VELUXE<span>.</span></a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="cars.html" class="nav-link">Cars</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <button class="nav-cart" id="cart-toggle" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="assets/hero-bg.jpg" alt="Luxury Car Showroom" class="hero-bg">
+        <div class="hero-overlay"></div>
+        
+        <!-- Animated Lines -->
+        <div class="hero-lines">
+            <div class="hero-line"></div>
+            <div class="hero-line"></div>
+            <div class="hero-line"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle animate-text-reveal">Welcome to Veluxe Motors</span>
+                <h1 class="hero-title">
+                    <span class="word-animate">Experience</span> 
+                    <span class="word-animate">Automotive</span> 
+                    <span class="word-animate gold-text">Luxury</span>
+                </h1>
+                <p class="hero-description animate-fade-up">
+                    Discover an exclusive collection of the world's most prestigious automobiles. 
+                    Where elegance meets performance, and every drive becomes extraordinary.
+                </p>
+                <div class="hero-buttons animate-fade-up">
+                    <a href="cars.html" class="btn btn-primary btn-glow">
+                        <i class="fas fa-car"></i>
+                        Explore Collection
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-outline-animate">
+                        <i class="fas fa-calendar"></i>
+                        Book a Test Drive
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+        
+        <!-- Hero Stats Floating -->
+        <div class="hero-floating-stats">
+            <div class="floating-stat" data-aos="fade-left" data-aos-delay="800">
+                <span class="floating-stat-number">50+</span>
+                <span class="floating-stat-label">Premium Cars</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Brand Strip -->
+    <section class="brand-marquee">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span class="marquee-item"><i class="fas fa-star"></i> FERRARI</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> LAMBORGHINI</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> PORSCHE</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> MCLAREN</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> ROLLS ROYCE</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> BENTLEY</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> ASTON MARTIN</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> MERCEDES</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> BMW</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> BUGATTI</span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-item"><i class="fas fa-star"></i> FERRARI</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> LAMBORGHINI</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> PORSCHE</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> MCLAREN</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> ROLLS ROYCE</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> BENTLEY</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> ASTON MARTIN</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> MERCEDES</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> BMW</span>
+                <span class="marquee-item"><i class="fas fa-star"></i> BUGATTI</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-choose-us">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Why Veluxe</span>
+                <h2 class="section-title">The <span class="gold-text">Ultimate</span> Luxury Experience</h2>
+                <p class="section-subtitle">
+                    We deliver more than just cars. We deliver dreams, status, and unparalleled driving experiences.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Curated Selection</h3>
+                    <p class="feature-text">Hand-picked masterpieces from the world's most prestigious brands, each verified for excellence.</p>
+                    <div class="feature-line"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Certified Quality</h3>
+                    <p class="feature-text">Every vehicle undergoes a rigorous 200-point inspection ensuring peak performance and condition.</p>
+                    <div class="feature-line"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">White Glove Service</h3>
+                    <p class="feature-text">Personal concierge service from initial inquiry to doorstep delivery, wherever you are.</p>
+                    <div class="feature-line"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="feature-icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title">Flexible Financing</h3>
+                    <p class="feature-text">Tailored financial solutions with competitive rates designed for discerning collectors.</p>
+                    <div class="feature-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="section featured-cars">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Our Collection</span>
+                <h2 class="section-title">Featured <span class="gold-text">Collection</span></h2>
+                <p class="section-subtitle">
+                    Handpicked masterpieces from the world's most prestigious automotive brands
+                </p>
+            </div>
+            
+            <div class="cars-grid">
+                <!-- Car Card 1 -->
+                <div class="car-card" data-aos="fade-up" data-aos-delay="100"
+                     data-id="1" data-brand="Lamborghini" data-model="Aventador SVJ" data-price="573966" data-image="assets/cars/lamborghini-aventador.jpg">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/lamborghini-aventador.jpg" alt="Lamborghini Aventador" class="car-image">
+                        <span class="car-badge">New Arrival</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" data-id="1">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Lamborghini</span>
+                        <h3 class="car-model">Aventador SVJ</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">770 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">217 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.8s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$573,966</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="1">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="1">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Car Card 2 -->
+                <div class="car-card" data-aos="fade-up" data-aos-delay="200"
+                     data-id="2" data-brand="Porsche" data-model="911 Turbo S" data-price="216100" data-image="assets/cars/porsche-911.jpg">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/porsche-911.jpg" alt="Porsche 911 Turbo S" class="car-image">
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" data-id="2">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Porsche</span>
+                        <h3 class="car-model">911 Turbo S</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">640 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">205 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.6s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$216,100</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="2">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="2">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Car Card 3 -->
+                <div class="car-card" data-aos="fade-up" data-aos-delay="300"
+                     data-id="5" data-brand="Ferrari" data-model="SF90 Stradale" data-price="625000" data-image="assets/cars/ferrari-sf90.jpg">
+                    <div class="car-image-wrapper">
+                        <img src="assets/cars/ferrari-sf90.jpg" alt="Ferrari SF90 Stradale" class="car-image">
+                        <span class="car-badge">Exclusive</span>
+                        <div class="car-overlay-hover">
+                            <button class="car-quick-view" data-id="5">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Ferrari</span>
+                        <h3 class="car-model">SF90 Stradale</h3>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-value">986 HP</span>
+                                <span class="spec-label">Power</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">211 mph</span>
+                                <span class="spec-label">Top Speed</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-value">2.5s</span>
+                                <span class="spec-label">0-60 mph</span>
+                            </div>
+                        </div>
+                        <span class="car-price">$625,000</span>
+                        <div class="car-actions">
+                            <button class="car-btn btn-add-cart" data-id="5">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="car-btn btn-buy-now" data-id="5">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="cars.html" class="btn btn-secondary btn-lg">
+                    View All Cars
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="video-showcase">
+        <div class="video-bg-overlay"></div>
+        <video autoplay muted loop playsinline class="video-bg" poster="assets/hero-bg.jpg">
+            <source src="assets/luxury-car-video.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="video-content" data-aos="zoom-in">
+                <span class="section-badge">Experience</span>
+                <h2 class="video-title">Feel the <span class="gold-text">Power</span></h2>
+                <p class="video-text">
+                    Step into a world where engineering excellence meets artistic design. 
+                    Every curve, every detail, crafted for those who demand perfection.
+                </p>
+                <a href="cars.html" class="btn btn-primary btn-glow">
+                    <i class="fas fa-play"></i>
+                    Explore Now
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-circle floating-circle-1"></div>
+            <div class="floating-circle floating-circle-2"></div>
+            <div class="floating-circle floating-circle-3"></div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number" data-target="25">0</div>
+                    <span class="stat-label">Years of Excellence</span>
+                    <div class="stat-bar"></div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <span class="stat-label">Cars Delivered</span>
+                    <div class="stat-bar"></div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <span class="stat-label">Premium Brands</span>
+                    <div class="stat-bar"></div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-number" data-target="98">0</div>
+                    <span class="stat-label">% Client Satisfaction</span>
+                    <div class="stat-bar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">How It Works</span>
+                <h2 class="section-title">Your Journey to <span class="gold-text">Ownership</span></h2>
+                <p class="section-subtitle">
+                    From discovery to delivery, we make luxury car ownership seamless and memorable
+                </p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-line"></div>
+                
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="process-number">01</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Discover</h3>
+                        <p>Browse our curated collection of world-class automobiles online or visit our showroom.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="process-number">02</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Experience</h3>
+                        <p>Schedule a private test drive to feel the power and luxury firsthand.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="process-number">03</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <h3>Customize</h3>
+                        <p>Work with our specialists to personalize financing and optional features.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-left" data-aos-delay="400">
+                    <div class="process-number">04</div>
+                    <div class="process-content">
+                        <div class="process-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>Delivery</h3>
+                        <p>Your dream car delivered to your doorstep with our white-glove service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Experience Section -->
+    <section class="section luxury-experience">
+        <div class="luxury-bg-pattern"></div>
+        <div class="container">
+            <div class="luxury-grid">
+                <div class="luxury-content" data-aos="fade-right">
+                    <span class="section-badge">The Veluxe Difference</span>
+                    <h2 class="luxury-title">Redefining <span class="gold-text">Luxury</span> Automotive</h2>
+                    <p class="luxury-text">
+                        At Veluxe Motors, we understand that acquiring a luxury vehicle is more than a transaction — 
+                        it's a statement of success and an investment in unparalleled experiences.
+                    </p>
+                    <ul class="luxury-features">
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Exclusive access to limited edition models</span>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="150">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Comprehensive vehicle history reports</span>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Extended warranty programs available</span>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="250">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 dedicated client support</span>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Global delivery to your location</span>
+                        </li>
+                    </ul>
+                    <a href="about.html" class="btn btn-primary btn-glow" data-aos="fade-up" data-aos-delay="350">
+                        Learn More About Us
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="luxury-images" data-aos="fade-left">
+                    <div class="luxury-image-main">
+                        <img src="assets/cars/ferrari-sf90.jpg" alt="Luxury Interior">
+                        <div class="luxury-image-overlay"></div>
+                    </div>
+                    <div class="luxury-image-secondary">
+                        <img src="assets/cars/porsche-911.jpg" alt="Luxury Exterior">
+                        <div class="luxury-image-overlay"></div>
+                    </div>
+                    <div class="luxury-badge-floating">
+                        <span class="badge-number">25+</span>
+                        <span class="badge-text">Years of Trust</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">Client <span class="gold-text">Stories</span></h2>
+                <p class="section-subtitle">
+                    Hear from our distinguished clientele about their Veluxe experience
+                </p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "The team at Veluxe Motors made my dream of owning a Lamborghini a reality. 
+                            Their attention to detail and personalized service is truly unmatched in the industry."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JC</div>
+                            <div class="author-info">
+                                <h4>James Carter</h4>
+                                <span>CEO, Tech Innovations</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-car">
+                            <i class="fas fa-car"></i> Purchased: Lamborghini Aventador
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "From the moment I walked into their showroom, I knew I was in the right place. 
+                            The expertise and passion of the Veluxe team is evident in everything they do."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SR</div>
+                            <div class="author-info">
+                                <h4>Sophia Reynolds</h4>
+                                <span>Fashion Designer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-car">
+                            <i class="fas fa-car"></i> Purchased: Porsche 911 Turbo S
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Purchasing my third vehicle from Veluxe was just as exceptional as the first. 
+                            They set the gold standard for luxury automotive experiences."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MA</div>
+                            <div class="author-info">
+                                <h4>Michael Anderson</h4>
+                                <span>Investment Banker</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-car">
+                            <i class="fas fa-car"></i> Purchased: Ferrari SF90
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Stay in the <span class="gold-text">Fast Lane</span></h2>
+                    <p>Subscribe to receive exclusive updates on new arrivals, special offers, and automotive insights.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Subscribe</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg-image"></div>
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">Ready to Experience <span class="gold-text">Extraordinary</span>?</h2>
+                <p class="cta-text">
+                    Your dream car awaits. Schedule a private viewing or test drive with our expert team today.
+                </p>
+                <div class="cta-buttons">
+                    <a href="cars.html" class="btn btn-primary btn-lg btn-glow">
+                        <i class="fas fa-car"></i>
+                        Browse Collection
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone"></i>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand" data-aos="fade-up">
+                        <a href="index.html" class="nav-logo">VELUXE<span>.</span></a>
+                        <p>
+                            Where automotive excellence meets unparalleled luxury. 
+                            Experience the pinnacle of performance and sophistication.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                            <li><a href="cars.html"><i class="fas fa-chevron-right"></i> Our Cars</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                        <h4>Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Car Sales</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Test Drives</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Financing</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Maintenance</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Trade-In</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+                        <h4>Contact</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>888 Luxury Avenue<br>Beverly Hills, CA 90210</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (888) 555-LUXE</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@veluxemotors.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Mon - Sat: 9AM - 8PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Veluxe Motors. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span class="cart-total-price" id="cart-total">$0</span>
+            </div>
+            <button class="cart-checkout" id="cart-checkout">
+                <i class="fas fa-lock"></i>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Buy Now Modal -->
+    <div class="modal-overlay" id="buy-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Quick Purchase</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <div class="modal-car-info" id="modal-car-info">
+                    <!-- Car info will be inserted here -->
+                </div>
+                <form class="modal-form" id="buy-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="buy-name" placeholder=" " required>
+                            <label class="form-label">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="buy-email" placeholder=" " required>
+                            <label class="form-label">Email</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" class="form-input" id="buy-phone" placeholder=" " required>
+                            <label class="form-label">Phone</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="buy-city" placeholder=" " required>
+                            <label class="form-label">City</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="modal-submit" id="modal-submit" form="buy-form">
+                    <i class="fas fa-credit-card"></i>
+                    Complete Purchase
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Details Modal -->
+    <div class="modal-overlay" id="car-details-modal">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3 id="car-details-title">Car Details</h3>
+                <button class="modal-close" id="car-details-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="car-details-body">
+                <!-- Car details will be inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
